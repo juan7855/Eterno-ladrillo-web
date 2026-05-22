@@ -69,13 +69,13 @@ export default function Cartografia() {
               08 — Visualización
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3">
-              Cartografía <span className="text-gradient-green italic">Experimental</span>
+              Cartografía: <span className="text-gradient-green italic">Visualización de Territorios</span>
             </h2>
             <h3 className="text-concrete-300 text-base sm:text-lg lg:text-xl font-light tracking-wide mb-6 uppercase">
               Análisis Visual y Entorno Urbano
             </h3>
             <p className="text-concrete-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-              Exploración de territorios a través del registro audiovisual. Una representación gráfica de la infraestructura y el diseño interactivo aplicados a la realidad de las calles como base para el proyecto Estandart.
+              La traducción de datos territoriales en representaciones visuales permite decodificar las dinámicas estructurales del entorno. Esta aproximación metodológica revela la complejidad intrínseca de la infraestructura urbana, transformando el espacio físico en un modelo empírico que integra precisión analítica y claridad estética.
             </p>
           </div>
         </FadeIn>
@@ -100,7 +100,7 @@ export default function Cartografia() {
             <div className="bg-gradient-to-br from-concrete-100/95 to-concrete-200/95 rounded-2xl p-4 sm:p-8 lg:p-12 backdrop-blur-sm">
               <div className="max-w-5xl mx-auto">
                 <img
-                  src="/images/cartografia.jpg.jpeg"
+                  src="/images/cartografia.jpg"
                   alt="Cartografía: Visualización de Territorios"
                   className="w-full h-auto object-contain rounded-lg shadow-2xl transition-transform duration-700 hover:scale-[1.02]"
                 />
@@ -113,7 +113,7 @@ export default function Cartografia() {
                 · Mapeo interactivo
               </span>
               <span className="text-[10px] font-mono uppercase tracking-widest text-concrete-600">
-                Colombia · Med-2026 ·
+                Cibercultura · Med-2026 ·
               </span>
             </div>
           </div>
