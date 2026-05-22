@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Leaf, TreePine } from 'lucide-react';
 
+// ESTA ES LA LISTA MAESTRA. ¡Aquí agregué Cartografía!
 const navLinks = [
   { label: 'Inicio', href: '#inicio' },
   { label: 'El Problema', href: '#problema' },
@@ -9,6 +10,7 @@ const navLinks = [
   { label: 'Impacto', href: '#impacto' },
   { label: 'Pilares', href: '#pilares' },
   { label: 'Prototipo', href: '#polinizador' },
+  { label: 'Cartografía', href: '#cartografia' }, // <-- TU NUEVA SECCIÓN
   { label: 'Actúa', href: '#actua' },
 ];
 
