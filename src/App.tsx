@@ -11,6 +11,7 @@ import CTA from './components/CTA';
 import Footer from './components/Footer';
 import Divider from './components/Divider';
 import Cartografia from './components/Cartografia';
+import Entrevista from './components/Entrevista';
 
 export default function App() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
         <Divider />
         <Polinizador />
         <Cartografia />
+        <Entrevista />
         <Divider />
         <CTA />
       </main>

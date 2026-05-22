@@ -10,7 +10,8 @@ const navLinks = [
   { label: 'Impacto', href: '#impacto' },
   { label: 'Pilares', href: '#pilares' },
   { label: 'Prototipo', href: '#polinizador' },
-  { label: 'Cartografía', href: '#cartografia' }, // <-- TU NUEVA SECCIÓN
+  { label: 'Cartografía', href: '#cartografia' },
+  { label: 'Entrevista', href: '#entrevista' }, 
   { label: 'Actúa', href: '#actua' },
 ];
 
