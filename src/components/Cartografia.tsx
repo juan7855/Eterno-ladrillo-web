@@ -100,8 +100,8 @@ export default function Cartografia() {
             <div className="bg-gradient-to-br from-concrete-100/95 to-concrete-200/95 rounded-2xl p-4 sm:p-8 lg:p-12 backdrop-blur-sm">
               <div className="max-w-5xl mx-auto">
                 <img
-                  src="/images/cartografia.jpg"
-                  alt="Cartografía Experimental y Visualización de Territorios"
+                  src="/images/cartografia.jpg.jpeg"
+                  alt="Cartografía: Visualización de Territorios"
                   className="w-full h-auto object-contain rounded-lg shadow-2xl transition-transform duration-700 hover:scale-[1.02]"
                 />
               </div>
@@ -113,7 +113,7 @@ export default function Cartografia() {
                 · Mapeo interactivo
               </span>
               <span className="text-[10px] font-mono uppercase tracking-widest text-concrete-600">
-                Estandart · Med-2026 ·
+                Colombia · Med-2026 ·
               </span>
             </div>
           </div>
