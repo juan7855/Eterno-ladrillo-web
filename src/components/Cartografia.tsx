@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Quote, Sprout, Activity } from 'lucide-react';
+import { Map, Video, Layers, Crosshair, ArrowRight } from 'lucide-react';
 
 function FadeIn({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef(null);
@@ -18,28 +18,42 @@ function FadeIn({ children, delay = 0, className = '' }: { children: React.React
   );
 }
 
-const phrases = [
+const modules = [
   {
-    icon: Sprout,
+    icon: Map,
     number: '01',
-    title: 'Visión Integral',
-    description: '«Restaurar no es solo sembrar un palo de Guayacán.»',
+    title: 'Mapeo de Locaciones',
+    description: 'Análisis y selección de coordenadas en la infraestructura de Medellín para intervenciones audiovisuales.',
   },
   {
-    icon: Activity,
+    icon: Video,
     number: '02',
-    title: 'Impacto Físico',
-    description: '«Cuando meten esas máquinas y tiran cemento el suelo deja de respirar.»',
-  }
+    title: 'Captura en Crudo',
+    description: 'Registro de la estética callejera y captura de video sets contrastando el caos urbano con sonido experimental.',
+  },
+  {
+    icon: Layers,
+    number: '03',
+    title: 'Análisis Semiótico',
+    description: 'Descomposición de la imagen urbana para entender la construcción de significado en el espacio público.',
+  },
+  {
+    icon: Crosshair,
+    number: '04',
+    title: 'Tracking Interactivo',
+    description: 'Implementación de técnicas de tracking 3D para integrar elementos virtuales sobre las grabaciones físicas.',
+  },
 ];
 
-export default function Entrevista() {
+const flowSteps = ['Mapea', 'Registra', 'Analiza', 'Sintetiza', 'Expone'];
+
+export default function Cartografia() {
   return (
-    <section id="entrevista" className="relative py-24 lg:py-32">
-      {/* Subtle gradient background idéntico a Cartografía */}
+    <section id="cartografia" className="relative py-24 lg:py-32">
+      {/* Subtle gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-forest-950/8 to-transparent pointer-events-none" />
 
-      {/* Subtle grid pattern idéntico a Cartografía */}
+      {/* Subtle grid pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <div className="absolute inset-0" style={{
           backgroundImage: `linear-gradient(to right, #4ade80 1px, transparent 1px), linear-gradient(to bottom, #4ade80 1px, transparent 1px)`,
@@ -52,24 +66,24 @@ export default function Entrevista() {
         <FadeIn>
           <div className="text-center mb-16">
             <span className="inline-block text-forest-400 text-xs uppercase tracking-[0.3em] font-mono mb-4 border border-forest-800/50 px-4 py-1 rounded-full">
-              09 — Testimonio
+              08 — Visualización
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3">
-              Voces del <span className="text-gradient-green italic">Territorio</span>
+              Cartografía <span className="text-gradient-green italic">Experimental</span>
             </h2>
             <h3 className="text-concrete-300 text-base sm:text-lg lg:text-xl font-light tracking-wide mb-6 uppercase">
-              Entrevista a Camilo Sánchez
+              Análisis Visual y Entorno Urbano
             </h3>
             <p className="text-concrete-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-              El análisis del entorno requiere escuchar a quienes habitan y entienden las dinámicas estructurales del suelo. Las siguientes observaciones reflejan el impacto empírico de las intervenciones artificiales.
+              Exploración de territorios a través del registro audiovisual. Una representación gráfica de la infraestructura y el diseño interactivo aplicados a la realidad de las calles como base para el proyecto Estandart.
             </p>
           </div>
         </FadeIn>
 
-        {/* Main Quote Block (Reemplaza el bloque de la imagen de Cartografía) */}
+        {/* Main diagram image */}
         <FadeIn delay={0.2}>
           <div className="relative mb-20 lg:mb-24">
-            {/* Decorative frame elements idénticos */}
+            {/* Decorative frame elements */}
             <div className="absolute -top-4 -left-4 w-12 h-12 border-l border-t border-forest-700/40" />
             <div className="absolute -top-4 -right-4 w-12 h-12 border-r border-t border-forest-700/40" />
             <div className="absolute -bottom-4 -left-4 w-12 h-12 border-l border-b border-forest-700/40" />
@@ -78,54 +92,56 @@ export default function Entrevista() {
             {/* Top label */}
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#0a0f0d] px-4 z-10">
               <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-forest-500">
-                Observación Central · Registro Visual
+                Visualización de Datos · Esc 1:1
               </span>
             </div>
 
-            {/* Quote container */}
-            <div className="bg-gradient-to-br from-concrete-900/30 to-forest-950/20 border border-forest-800/20 rounded-2xl p-10 sm:p-16 lg:p-24 backdrop-blur-sm flex flex-col items-center justify-center text-center relative overflow-hidden">
-              <Quote className="absolute top-10 left-10 w-32 h-32 text-forest-900/10 rotate-180 pointer-events-none" />
-              <p className="font-serif text-3xl sm:text-4xl lg:text-5xl text-concrete-200 leading-tight italic relative z-10 max-w-4xl">
-                «La naturaleza no entiende de decretos ni firmas.»
-              </p>
-              <Quote className="absolute bottom-10 right-10 w-32 h-32 text-forest-900/10 pointer-events-none" />
+            {/* Image container */}
+            <div className="bg-gradient-to-br from-concrete-100/95 to-concrete-200/95 rounded-2xl p-4 sm:p-8 lg:p-12 backdrop-blur-sm">
+              <div className="max-w-5xl mx-auto">
+                <img
+                  src="/images/cartografia.jpg.jpeg"
+                  alt="Cartografía: Visualización de Territorios"
+                  className="w-full h-auto object-contain rounded-lg shadow-2xl transition-transform duration-700 hover:scale-[1.02]"
+                />
+              </div>
             </div>
 
             {/* Bottom annotation */}
             <div className="flex items-center justify-between mt-3 px-2">
               <span className="text-[10px] font-mono uppercase tracking-widest text-concrete-600">
-                · Análisis Cualitativo
+                · Mapeo interactivo
               </span>
               <span className="text-[10px] font-mono uppercase tracking-widest text-concrete-600">
-                Cibercultura · Med-2026 ·
+                Colombia · Med-2026 ·
               </span>
             </div>
           </div>
         </FadeIn>
 
-        {/* Modules grid para las otras dos frases */}
-        <div className="grid sm:grid-cols-2 gap-4 lg:gap-6 mb-20 max-w-4xl mx-auto">
-          {phrases.map((phrase, i) => (
+        {/* Modules grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-20">
+          {modules.map((mod, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-              <div className="relative bg-concrete-900/40 border border-concrete-800/40 rounded-2xl p-8 backdrop-blur-sm hover:border-forest-700/40 hover:bg-concrete-900/60 transition-all duration-500 group h-full">
+              <div className="relative bg-concrete-900/40 border border-concrete-800/40 rounded-2xl p-6 backdrop-blur-sm hover:border-forest-700/40 hover:bg-concrete-900/60 transition-all duration-500 group h-full">
                 {/* Number watermark */}
                 <span className="absolute top-4 right-5 font-mono text-xs text-forest-600/60 tracking-widest">
-                  {phrase.number}
+                  {mod.number}
                 </span>
 
                 {/* Icon */}
-                <div className="w-11 h-11 rounded-xl bg-forest-950/60 border border-forest-800/30 flex items-center justify-center mb-6 group-hover:bg-forest-900/40 transition-colors">
-                  <phrase.icon className="w-5 h-5 text-forest-400" />
+                <div className="w-11 h-11 rounded-xl bg-forest-950/60 border border-forest-800/30 flex items-center justify-center mb-4 group-hover:bg-forest-900/40 transition-colors">
+                  <mod.icon className="w-5 h-5 text-forest-400" />
                 </div>
 
                 {/* Title */}
-                <h4 className="font-serif text-base lg:text-lg text-white font-semibold mb-4 leading-snug">
-                  {phrase.title}
+                <h4 className="font-serif text-base lg:text-lg text-white font-semibold mb-2 leading-snug">
+                  {mod.title}
                 </h4>
 
-                {/* Description (Quote) */}
-                <p className="text-concrete-300 text-lg leading-relaxed italic font-serif">
-                  {phrase.description}
+                {/* Description */}
+                <p className="text-concrete-400 text-sm leading-relaxed">
+                  {mod.description}
                 </p>
 
                 {/* Bottom accent line */}
@@ -135,12 +151,51 @@ export default function Entrevista() {
           ))}
         </div>
 
-        {/* Tech specs footer line idéntico a Cartografía */}
+        {/* Functional flow */}
+        <FadeIn delay={0.2}>
+          <div className="bg-gradient-to-br from-concrete-900/30 to-forest-950/20 border border-forest-800/20 rounded-2xl p-6 sm:p-8 lg:p-10 backdrop-blur-sm">
+            <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
+              {/* Label */}
+              <div className="lg:w-1/4">
+                <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-forest-500 block mb-2">
+                  Flujo de Registro
+                </span>
+                <h4 className="font-serif text-xl lg:text-2xl text-white font-semibold">
+                  Metodología de Campo
+                </h4>
+              </div>
+
+              {/* Steps */}
+              <div className="lg:w-3/4">
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-3">
+                  {flowSteps.map((step, i) => (
+                    <div key={step} className="flex items-center gap-2">
+                      <div className="flex items-center gap-2">
+                        <span className="font-mono text-[10px] text-forest-600 font-bold">
+                          0{i + 1}
+                        </span>
+                        <span className="text-concrete-200 font-medium text-sm sm:text-base tracking-wide">
+                          {step}
+                        </span>
+                      </div>
+                      {i < flowSteps.length - 1 && (
+                        <ArrowRight className="w-3.5 h-3.5 text-forest-600/60 mx-1" />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* Tech specs footer line */}
         <FadeIn delay={0.3}>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[10px] font-mono uppercase tracking-[0.2em] text-concrete-600">
-            <span>· Memoria del Suelo</span>
             <span>· Entorno Urbano</span>
-            <span>· Intervención Física</span>
+            <span>· Análisis de Imagen</span>
+            <span>· Tracking Visual 3D</span>
+            <span>· Documentación Cruda</span>
           </div>
         </FadeIn>
       </div>
