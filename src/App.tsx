@@ -10,6 +10,7 @@ import Polinizador from './components/Polinizador';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import Divider from './components/Divider';
+import Cartografia from './components/Cartografia';
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
         <Timeline />
         <Divider />
         <Polinizador />
+        <Cartografia />
         <Divider />
         <CTA />
       </main>
